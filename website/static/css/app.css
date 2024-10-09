@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --blue: #0188DF;
+  --black: #354046;
+  --fros-blue-color: #0050d5;
+  --light-blue-color: #16c5ff;
+  --dark-color: #202020;
+  --light-gray: #dedede;
+  --dark-gray: #a1a1a0;
+  --light-color: #fff;
+}
+
+#myInput {
+  background-image: url(''); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 50%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  font-weight: 500;
+  text-align: left;
+  margin: auto;
+  display: block;
+  padding: 12px 20px 12px 25px; /* Add some padding */
+  border: 1.5px solid indigo; /* Add a grey border */
+  border-radius: 25px;
+  margin-top: 12px;
+  margin-bottom: 12px; /* Add some space below the input */
+  background-color: #f1f1f1; /* Add a grey background color */
+}
+.searchinput i {
+  position: absolute;
+  margin-top: -47px;
+  right: 400px;
+  font-size: 20px;
+  color: #999;
+}
+.searchinput i:hover {
+  color: #666;
+}
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding-bottom: 150px;
+  margin: 0;
+}
+#myUL li a {
+  border: 1px solid #8304df; /* Add a border to all links */
+  border-radius: 25px;
+  width: 50%;
+  margin: auto;
+  display: block;
+  margin-bottom: 12px;
+  background-color: #f1f1f1;
+  padding: 12px 12px 12px 20px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  text-align: left;
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+#myUL li a .docname {
+  font-weight: 600;
+}
+#myUL li a .docfield {
+  font-size: 16px;
+  color: #999;
+}
+#myUL li a .room {
+  position: absolute;
+  margin-top: -37px;
+  right: 400px;
+  font-size: 17px;
+  color: #585858;
+}
+#myUL li a .pname {
+  font-weight: 600;
+}
+#myUL li a .pemail {
+  font-size: 16px;
+  color: #999;
+}
+#myUL li a i {
+  position: absolute;
+  margin-top: -38px;
+  right: 400px;
+  font-size: 24px;
+  color: var(--blue);
+}
+#myUL li a:hover {
+  background-color: #b0d5e2;
+  padding-left: 50px; 
+}
+.doctor_heading h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Style for about.html*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  /*background-color: #ddd;*/
+}
+
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.content-section {
+  float: left;
+  width: 55%;
+}
+
+.image-section {
+  float: right;
+  width: 40%;
+}
+
+.image-section img {
+  width: 125%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.content-section .title {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.content-section .title i {
+  color: black;
+}
+
+.content-section .content h3 {
+  margin-top: 20px;
+  color: #5d5d5d;
+  font-size: 20px;
+}
+
+.content-section .content p {
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.content-section .content .button-abt {
+  margin-top: 30px;
+}
+
+.content-section .content .button-abt a {
+  background-color: indigo;
+  padding: 12px 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 25px;
+}
+
+.content-section .content .button-abt a:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.content-section .social {
+  margin: auto;
+  margin-top: 40px;
+}
+
+.content-section .social i {
+  color: indigo;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+.content-section .social i:hover {
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .content-section {
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .image-section {
+    float: none;
+    width: 100%;
+    padding-bottom: 69px;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .content-section .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .content-section .title i {
+    color: black;
+  }
+  .content-section .content .button-abt {
+    text-align: center;
+  }
+
+  .content-section .content .button-abt a {
+    padding: 9px 30px;
+  }
+
+  .content-section .social {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+}
+body {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 0 0 50px;
+}
+
+.footer-col-1 {
+  width: 80%;
+  padding: 0 0 0 50px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 60px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+  #myInput {
+    width: 75%;
+  }
+  #myUL li a {
+    width: 75%;
+  }
+  #myUL li a .docname {
+    font-weight: 600;
+  }
+  
+  #myUL li a .docfield {
+    font-size: 16px;
+    color: #999;
+  }
+  
+  #myUL li a .room {
+    position: absolute;
+    margin-top: -37px;
+    right: 70px;
+    font-size: 17px;
+    color: #585858;
+  }
+  
+  #myUL li a .pname {
+    font-weight: 600;
+  }
+  
+  #myUL li a .pemail {
+    font-size: 16px;
+    color: #999;
+  }
+  
+  #myUL li a i {
+    position: absolute;
+    margin-top: -38px;
+    right: 85px;
+    font-size: 24px;
+    color: var(--blue);
+  }
+  
+  #myUL li a:hover {
+    background-color: #b0d5e2;
+    padding-left: 40px;
+  }
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+    .footer-col-1 {
+      width: 80%;
+      padding: 0;
+    }
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+#about_head {
+  background-color: #fff;
+}

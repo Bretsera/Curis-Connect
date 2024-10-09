@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <!-- aos css file cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- magnific popup css cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <!-- bootstrap cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="../../static/css/footer.css">
+  <link rel="stylesheet" href="../../static/css/style.css">
+  <!-- jquery cdn link -->
+  <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    $(function () {
+      $('#footer').load('../../static/reusefooter.html');
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#mydatepicker").datepicker({
+        minDate: 0,
+        changeMonth: true,
+        changeYear: true
+      });
+    });
+  </script>
+</head>
+<body>
+  <header id="about_head">
+    <div class="container">
+        <a href="/" class="logo"><span>KDH</span> Hospital</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/patients">Patients</a></li>
+            <li><a href="/doctors">Doctors</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            {% if user.is_authenticated %}
+            {% if user.fname == 'admin' %}
+            <li><div class="signup">
+              <a href="/admin">Admin</a>
+            </div></li>
+            {% else %}
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/payments">Payments</a></li>
+            <li><div class="signup">
+              <a href="/logout">Logout</a>
+            </div></li>
+            {% endif %}
+            {% else %}
+            <li><div class="signup">
+                <a href="/login">Login</a>
+              </div></li>
+            <li><div class="signup">
+                <a href="/signup">Sign Up</a>
+              </div></li>
+            {% endif %}
+        </ul>
+        </nav>
+        <div class="fas fa-bars"></div>
+    </div>
+    </header>
+    <div class="contact" style="padding-top: 69px;">
+    </div>
+    <!--info-section start-->
+    <section class="about" id="about">
+      <div class="container" style="padding-bottom:30px;">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alert-dismissible" role="alert" style="background-color:#f8d7da;padding-top:20px;font-size:16px;">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" style="padding-top:18px;">
+            <span aria-hidden="true" style="font-size:30px;font-weight:bolder;">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible" role="alert" style="padding-top:20px;font-size:16px;">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" style="padding-top:18px;">
+            <span aria-hidden="true" style="font-size:30px;font-weight:bolder;">&times;</span>
+          </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+        <div class="row min-vh-100 align-items-center">
+          <div class="col-md-6 content" data-aos="fade-right">
+            <div class="title" style="font-size:35px;font-weight:500;color:#666;padding-left:10px;padding-bottom:25px;padding-top: 70px;">
+              <i class="fas fa-phone-alt" style="color:#0188DF"></i> Contact Info
+            </div>
+            <div class="box">
+              <h3> <i class="fas fa-ambulance"></i> Ambulance Services </h3>
+              <p>24x7 Fast Ambulance Services.</p>
+              <p>Call us at: <span>1800-123-4567</span></p>
+            </div>
+            <div class="box">
+              <h3> <i class="fas fa-procedures"></i> Emergency Rooms </h3>
+              <p>Well equipped rooms with 24x7 Expert Doctor support.</p>
+              <p>Call us at: <span>040-4344-4567</span></p>
+            </div>
+            <div class="box">
+              <h3> <i class="fas fa-stethoscope"></i> Health Check-Ups </h3>
+              <p>Full body check, blood sugar, blood pressure, heart health check, WBC & RBC count check, etc.</p>
+              <p>Call us at: <span>186-0500-0202</span></p>
+            </div>
+            <div class="box">
+              <h3> <i class="fas fa-user-md"></i> General Enquiries </h3>
+              <p>For any general enquiries, please contact us at the following address.</p>
+              <p>Call us at: <span>040-4344-4567</span></p>
+              <p>Email us at: <span>help@kdhhospital.com</span></p>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-md-block" data-aos="fade-left">
+            <img src="https://webstockreview.net/images/clipart-doctor-lady-doctor-11.png" width="100%" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--info-section end-->
+    <!--appointment form start-->
+    <section class="appointment" id="appointment">
+      <div class="container" style="padding-bottom:120px;">
+        <div class="row">
+          <div class="col-md-6 d-none d-md-block" data-aos="fade-right" style="padding-top:80px;padding-right:20px;">
+            <img src="https://img.freepik.com/premium-vector/doctor-with-stethoscope-sitting-desk-with-monitor-detailed-flat-style-isolated-white_302536-21.jpg?w=2000" width="100%" alt="">
+          </div>
+          <div class="col-md-6 content" data-aos="fade-left">
+            <div class="title" style="font-size:30px;font-weight:600;color:#666;padding-top:50px;padding-bottom:15px;">
+              <i class="fas fa-calendar-alt" style="color:#0188DF"></i> 
+              Book an Appointment
+            </div>
+            <p style="color:#666;font-size:16px;">Book an appointment with our expert doctors and get your health checked.</p>
+            <form method="POST">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email" name="email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Address" name="address" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Problem" name="problem" required>
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="dcselect" required>
+                  <option value="" disabled selected>Select Doctor</option>
+                  {% for doctor in doctors %}
+                  <option value="{{ doctor.id }}">{{ doctor.name }} - {{ doctor.field }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="date" onfocus="this.min=new Date().toISOString().split('T')[0]" class="form-control" name="date" required>
+              </div>
+              <div class="form-group">
+                <input type="time" class="form-control" name="time" required>
+              </div>
+              <div class="row justify-content-center">
+              <div class="form-group" style="padding-top:10px;padding-bottom:30px;">  
+                <button type="submit" class="btn btn-primary" id="appt_butt">Book Appointment</button>
+              </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--appointment form ends-->
+    <!-- address section starts -->
+    <section class="address" id="address" style="padding-bottom:100px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 content" data-aos="fade-right">
+            <div class="title" style="font-size:30px;font-weight:600;color:#666;padding-bottom:15px;">
+              <i class="fas fa-map-marker-alt" style="color:#0188DF"></i>
+              Our Address
+            </div>
+            <p style="color:#666;font-size:18px;">We are located at the following address:</p>
+            <div class="box">
+              <h3 style="color:#666;font-weight:600;"> <i class="fas fa-hospital" style="color:#0188DF"></i> KDH Hospital </h3>
+              <p style="font-size:16px;color:#666;">M2JC+4CG, K.D.H, B Type, jharkhand, Jharkhand 829209</p>
+            </div>
+            <div class="box" style="color:#666;font-size:20px;font-weight:600;">
+              <i class="fas fa-phone-alt" style="color:#0188DF"></i> Phone
+              <p style="font-size:16px;">Call us at: <span>040-4344-4567</span></p>
+              <i class="fas fa-envelope" style="color:#0188DF"></i> Email
+              <p style="font-size:16px;">Email us at: <span>help@kdhhospital.com</span></p>
+            </div>
+          </div>
+          <div class="col-md-6 d-md-block" data-aos="fade-left" id="mapimage">
+            <p><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58462.05632853371!2d84.95104145820311!3d23.680301900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4ca01ab88fd49%3A0xc5ff81594ec888d0!2sK.D.H%20Hospital!5e0!3m2!1sen!2sin!4v1667622328566!5m2!1sen!2sin"
+                width="100%" height="450" style="border-radius:16px;border:none;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- address section ends -->
+    <footer class="footer">
+      <div id="footer"></div>
+    </footer>
+    <!-- magnific popup js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- aos js file cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- custom js link  -->
+    <script src="../../static/main.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        delay: 400
+      });
+    </script>
+</body>
+</html>

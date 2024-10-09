@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <!-- jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#footer').load('../../static/reusefooter.html');
+        });
+    </script>
+</head>
+<body>
+    <div id="signup">
+        <header id="about_head">
+            <div class="container">
+                <a href="/" class="logo"><span>KDH</span> Hospital</a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/patients">Patients</a></li>
+                        <li><a href="/doctors">Doctors</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li>
+                            <div class="signup">
+                                <a href="/login">Login</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="signup">
+                                <a href="/signup">Sign Up</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="fas fa-bars"></div>
+            </div>
+        </header>
+        <form method="POST">
+        <div id="sign_foot">
+            <div class="container body-content">
+                <div class="container">
+                    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+                    messages %} {% for category, message in messages %} {% if category ==
+                    'error' %}
+                    <div class="alert alert-danger alert-dismissible" role="alert" style="background-color:#f8d7da;padding-top:10px;">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true" style="font-size:25px;font-weight:bolder;">&times;</span>
+                        </button>
+                    </div>
+                    {% else %}
+                    <div class="alert alert-success alert-dismissible" role="alert" style="padding-top:10px;">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true" style="font-size:25px;font-weight:bolder;">&times;</span>
+                        </button>
+                    </div>
+                    {% endif %} {% endfor %} {% endif %} {% endwith %}
+                    <div class="row justify-content-start" style="padding-top:70px;padding-left:14px;font-size:30px;font-weight:bold">
+                        <div class="resetheader">
+                            <a href="/signup"><i class="fas fa-user-circle"></i></a>
+                        </div>
+                        <p style="padding-left:10px;font-weight:bold">Sign Up<p>
+                    </div>
+                    <div class="row justify-content-start" style="padding-top:10px;">
+                        <div class="col" style="padding-top:10px;padding-left:20px;">
+                            <label>First Name</label>
+                        </div>
+                        <div class="col" style="padding-top:10px;">
+                            <label>last Name</label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start" style="padding-bottom:10px;">
+                        <div class="col" style="padding-top:5px;">
+                            <input placeholder="Name" name="fname" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        </div>
+                        <div class="col" style="padding-top:5px;">
+                            <input placeholder="Surname" name="sname" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start" style="padding-top:5px;">
+                        <div class="col" style="padding-top:10px;padding-left:20px;">
+                            <label>Phone</label>
+                        </div>
+                        <div class="col" style="padding-top:10px;">
+                            <label>E-mail</label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start" style="padding-bottom:10px;">
+                        <div class="col" style="padding-top:5px;">
+                            <input type="number" placeholder="Mobile Number" name="phone" class="form-control" style="border-radius:20px;background-color:#ebebeb;"></input>
+                        </div>
+                        <div class="col" style="padding-top:5px;">
+                            <input type="email" placeholder="Enter Email" name="email" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start" style="padding-top:5px;">
+                        <div class="col" style="padding-top:10px;padding-left:20px;">
+                            <label>Password</label>
+                        </div>
+                        <div class="col" style="padding-top:10px;">
+                            <label>Confirm Password</label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start" style="padding-bottom:10px;">
+                        <div class="col" style="padding-top:5px;">
+                            <input type="password" placeholder="Enter Password" name="password" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        </div>
+                        <div class="col" style="padding-top:5px;">
+                            <input type="password" placeholder="Enter Password" name="confirm" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center" style="padding-top:15px;">
+                        <label><input type="checkbox" id="check" required /> I agree to <a href=about.html style="font-weight:bold;">Terms and Conditions</a></label>
+                    </div>
+                    <div class="row justify-content-center" style="padding-top:10px;padding-bottom: 220px;">
+                        <button type="submit" class="btn btn-primary" id="sign_butt">SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <footer class="footer">
+        <div id="footer"></div>
+    </footer>
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- magnific popup js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- aos js file cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- custom js link  -->
+    <script src="../../static/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            delay: 400
+        });
+    </script>
+</body>
+</html>

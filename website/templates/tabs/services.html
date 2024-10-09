@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <!-- aos css file cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- magnific popup css cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <!-- bootstrap cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="../../static/css/app.css">
+  <link rel="stylesheet" href="../../static/css/style.css">
+  <!-- jquery cdn link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('#footer').load('../../static/reusefooter.html');
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <a href="/" class="logo"><span>KDH</span> Hospital</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/patients">Patients</a></li>
+            <li><a href="/doctors">Doctors</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            {% if user.is_authenticated %}
+            {% if user.fname == 'admin' %}
+            <li><div class="signup">
+              <a href="/admin">Admin</a>
+            </div></li>
+            {% else %}
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/payments">Payments</a></li>
+            <li><div class="signup">
+              <a href="/logout">Logout</a>
+            </div></li>
+            {% endif %}
+            {% else %}
+            <li><div class="signup">
+              <a href="/login">Login</a>
+            </div></li>
+            <li><div class="signup">
+              <a href="/signup">Sign Up</a>
+            </div></li>
+            {% endif %}
+        </ul>
+        </nav>
+        <div class="fas fa-bars"></div>
+    </div>
+  </header>
+  <!--services section starts-->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" data-aos="fade-up">
+          <div class="title">
+            <div class="title-heading" style="font-size:30px;font-weight:bold;">
+              <i class="fas fa-user-friends"></i> Our Services
+            </div>
+            <p>Our Hospital provides best of these services across the country.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-right">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-heartbeat"></i></div>
+            <div class="content">
+              <h3>Cardiology</h3>
+              <p>We can treat all your Heart diseases except for 'Love'.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-briefcase-medical"></i></div>
+            <div class="content">
+              <h3>Neurology</h3>
+              <p>Your Brain is superior than any machine..... so unlike engineers we fix that thoroughly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-left">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-briefcase-medical"></i></div>
+            <div class="content">
+              <h3>Opthalmology</h3>
+              <p>We help you get a clear vision towards future with our best technology & doctors.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-right">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-briefcase-medical"></i></div>
+            <div class="content">
+              <h3>Dermatolgy</h3>
+              <p>You are pretty but with the help our excellent skin care and dermatology experts you can be prettier.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-briefcase-medical"></i></div>
+            <div class="content">
+              <h3>Pathology</h3>
+              <p>Each drop matters!!!. We offer you the best Pathology services along with doorstep blood collection.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-left">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-briefcase-medical"></i></div>
+            <div class="content">
+              <h3>Orthopedics</h3>
+              <p>With the best technology and the geniuses of our doctors we offer you best Orthopedics across the country.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-right">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-briefcase-medical"></i></div>
+            <div class="content">
+              <h3>Surgery</h3>
+              <p>Surgery uses instrumental techniques on a person to treat a conditions such as a disease/injury, to improve bodily function, appearance, or repair ruptured areas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-briefcase-medical"></i></div>
+            <div class="content">
+              <h3>Radiology</h3>
+              <p>Radiology represents a branch of medicine that deals with radiant energy in the diagnosis and treatment of diseases. It is used in MRI and CT scans</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-left" style="padding-bottom:50px;">
+          <div class="box">
+            <div class="icon" style="color:#0188DF;font-size:20px;"><i class="fas fa-briefcase-medical"></i></div>
+            <div class="content">
+              <h3>Dentistry</h3>
+              <p>Dentistry, also known as dental medicine and 'oral' medicine, is the branch of medicine focused on the teeth, gums, and mouth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--services section ends-->
+  <footer class="footer">
+    <div id="footer"></div>
+  </footer>
+  <!-- jquery cdn link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- magnific popup js link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <!-- aos js file cdn link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- custom js link  -->
+  <script src="../../static/main.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      delay: 400
+    });
+  </script>
+</body>
+</html>

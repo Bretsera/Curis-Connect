@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../../static/css/app.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <!-- jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#footer').load('../../static/reusefooter.html');
+        });
+    </script>
+</head>
+<body>
+    <header id="about_head">
+        <div class="container">
+            <a href="/" class="logo"><span>KDH</span> Hospital</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/patients">Patients</a></li>
+                    <li><a href="/doctors">Doctors</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    {% if user.is_authenticated %}
+                    {% if user.fname == 'admin' %}
+                    <li><div class="signup">
+                        <a href="/admin">Admin</a>
+                    </div></li>
+                    {% else %}
+                    <li><a href="/appointments">Appointments</a></li>
+                    <li><a href="/payments">Payments</a></li>
+                    <li><div class="signup">
+                        <a href="/logout">Logout</a>
+                    </div></li>
+                    {% endif %}
+                    {% else %}
+                    <li><div class="signup">
+                        <a href="/login">Login</a>
+                    </div></li>
+                    <li><div class="signup">
+                        <a href="/signup">Sign Up</a>
+                    </div></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </div>
+    </header>
+    <br>
+    <!-- header section ends  -->
+    <!-- about section starts  -->
+    <div class="section" style="padding-top:50px;">
+        <div class="container">
+            <div class="content-section" data-aos="fade-right">
+                <div class="title">
+                    <a href="/about"><i class="fas fa-info-circle"></i></a>
+                    About Us
+                </div>
+                <div class="content">
+                    <h3>Your health is our priority</h3>
+                    <p>We are ready to serve you with all our dedication. With our experience and support of our expert doctors we are here to treat you in all the possible ways. Also we are available for online assistance. Our reliable staff and experienced doctors are at your service 24x7.</p>
+                    <div class="button-abt">
+                        <a href="/about">Read More</a>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="image-section" data-aos="fade-left">
+                <img src="https://images.pexels.com/photos/7578803/pexels-photo-7578803.jpeg?auto=compress&cs=tinysrgb&w=600" width="100%" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- about section ends  -->
+    <!-- footer section starts  -->
+    <footer class="footer">
+        <div id="footer"></div>
+    </footer>
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- magnific popup js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- aos js file cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- custom js link  -->
+    <script src="../../static/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            delay: 400
+        });
+    </script>
+</body>
+</html>
