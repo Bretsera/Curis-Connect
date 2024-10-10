@@ -15,9 +15,10 @@ Aim: to create a robust website to better connect the patients and their respect
 Frontend: Html, Css (Bootstrap) & Javascript   
 Backend: Python – (Flask) framework     
 Database: SqLite/MySQL    
-## Hosting:  
-Deployed At: https://hitstar53.pythonanywhere.com      
-Admin Access: email: `admin@kdh.com` & password: `password`  
+## Hosting: 
+Deployed At: (To be deployed at a later date)
+Admin Access: (Admin credentials will be updated upon deployment)
+  
 
 ## Outline of Website:
 •	Homepage of the website  
