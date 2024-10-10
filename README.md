@@ -30,9 +30,9 @@ Admin Access: (Admin credentials will be updated upon deployment)
 •	Patient Login: Subtabs: Appointments, Payment Portal & logout  
 
 ## Timeline
-1/10/22  - Basic structure of project & gather resources (Done)    
-15/10/22 - Complete Frontend aspect of the website (Done)    
-15/11/22 - Complete Backend aspect of the website (Done)    
-27/11/22 - Link frontend with database & final testing/debugging (Done)  
+01/10/23  - Basic structure of project & gather resources (Done)    
+15/10/23 - Complete Frontend aspect of the website (Done)    
+15/11/23 - Complete Backend aspect of the website (Done)    
+27/11/23 - Link frontend with database & final testing/debugging (Done)  
 
 Overall Website Progress: 100% Complete  
