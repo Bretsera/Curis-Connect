@@ -18,7 +18,6 @@ Database: SqLite/MySQL
 ## Hosting: 
 Deployed At: (To be deployed at a later date)
 Admin Access: (Admin credentials will be updated upon deployment)
-  
 
 ## Outline of Website:
 •	Homepage of the website  
